@@ -36,4 +36,5 @@ header{
     width: 100%;
     z-index: 99;
     padding: .9em;
+    border-radius: 15vw;
 }

@@ -30,6 +30,7 @@ export const Introduction = styled.div`
     height: 70vh;
     width: 100%;
     margin-top: -4vw;
+    border-radius: 10vw;
 
     .apresentation{
         display: flex;
@@ -101,6 +102,7 @@ export const Introduction = styled.div`
 export const AboutMe = styled.div`
     background-color: #1A1A29;
     height: 70vh;
+    border-radius: 7vw;
     
     h2{
         margin-top: 84px;
@@ -116,22 +118,14 @@ export const AboutMe = styled.div`
         font-size: 18px;
     }
 
-    img{
-        margin-left: 22vw;
-        margin-top: -3.5vw;
-        height: 19vh;
-        transform:  rotate(10deg);
-        opacity: 0.5;
-    }
-
     h3{
         color: #7562E0;
         width: 127px;
         height: 144px;
         font-size: 96px;
         margin-left: 129px;
-        margin-top: -3vw;
-        animation: move 1.2s infinite alternate;
+        margin-top: 3vw;
+        animation: move 2.2s infinite alternate;
             @keyframes move {
             from {
                 transform: translateY(10px)
@@ -151,6 +145,7 @@ export const AboutMe = styled.div`
 
 export const Projects = styled.div`
     background-color: #1A1A29;
+    height: 125vh;
 
     h4{
         margin-top: 84px;
@@ -167,12 +162,12 @@ export const Projects = styled.div`
         justify-content: center;
         align-items: center;
         gap: 2em;
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     .container-project{
         width: 250px;
-        height: 290px;
+        height: 300px;
         background-color: #31313F;
         border-radius: 10px;
     }
@@ -191,6 +186,18 @@ export const Projects = styled.div`
         margin-top: 0.5vw;
     }
 
+    .project-name-soon{
+        color: #7d7c7a;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 0.5vw;
+        opacity: 0.4;
+    }
+
+    .doguinho{
+        opacity: 0.4;
+    }
+
     .about-it{
         padding: 1.1em;
         margin-left: 6px;
@@ -205,11 +212,26 @@ export const Projects = styled.div`
         border-radius: 10px;
         font-size: 13px;
         padding: 5px;
+        margin-left: 1vw;
    }
 
    .repository-link:hover{
-    background-color: #9e91e9;
-    transition: 0.5s;
+        background-color: #9e91e9;
+        transition: 0.5s;
+   }
+
+   .application-link{
+        margin-left: -2.5vw;
+        color: #FFF;
+        background-color: #7562E0;
+        border-radius: 10px;
+        font-size: 13px;
+        padding: 6px;
+   }
+
+   .application-link:hover{
+        background-color: #9e91e9;
+        transition: 0.5s;
    }
 
  
@@ -217,12 +239,13 @@ export const Projects = styled.div`
 
 export const Skills = styled.div`
     background-color: #1A1A29;
+    height: 75vh;
 
     h5{
     margin-top: 84px;
     margin-left: 137px;
     color: #7562E0;
-    font-size: 32px;
+    font-size: 40px;
     padding-top: 55px;
     }
 
@@ -233,15 +256,115 @@ export const Skills = styled.div`
         justify-content: center;
         align-items: center;
         gap: 2em;
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     .container-skills{
-        width: 250px;
-        height: 290px;
+        width: 270px;
+        height: 300px;
         background-color: #1A1A29;
-        border-radius: 10px;
+        border-radius: 15px;
         border: 1px solid #7562E0;
+
+        img{
+            margin: 10px auto 0 106px;
+            height: 10vh;
+        }
+
+        .stack{
+            color: #7562E0;
+            font-size: 18.5px;
+            text-align: center;
+            margin-top: 0.1vw;
+        }
+
+        p{
+            text-align: center;
+            padding: 2vw;
+            margin-top: -2vw;
+        }
+    }
+`
+
+export const Contact = styled.div`
+    background-color: #1A1A29;
+    height: 70vh;
+
+    h6{
+    margin-top: 84px;
+    margin-left: 137px;
+    color: #7562E0;
+    font-size: 32px;
+    padding-top: 55px;
     }
 
+    .contacts{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 5vw;
+        margin-top: 2vw;
+        margin-left: 140px;
+    }
+
+    img{
+        height: 35px;
+    }
+
+    .formulario label{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-right: 180px;
+        margin-bottom: 16px;
+    }
+
+    .formulario{
+        margin-top: -6.7vw;
+    }
+
+    input{
+        width: 450px;
+        height: 55px;
+        background-color: #32323F;
+        border-radius: 10px;
+        border: none;
+        padding-left: 1vw;
+        color: #FFF;
+    }
+    
+    textarea{
+        resize: none;
+        padding-left: 1vw;
+        height: 80px;
+        width: 38.5%;
+        border-radius: 10px;
+        background-color: #32323F;
+        border: none;
+        padding: 1vw;
+        font-size: 17px;
+        color: #FFF;
+    }
+
+    button{
+        height: 50px;
+        width: 174px;
+        background-color: #7562E0;
+        color: #FFF;
+        border-radius: 10px;
+        border: none;
+        margin-right: 20vw;
+    }
+`
+
+export const Footer = styled.div`
+    background-color:  #1A1A29; 
+    width: 100%;
+    height: -6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-direction: row;
+    padding: 1.5vw;
 `

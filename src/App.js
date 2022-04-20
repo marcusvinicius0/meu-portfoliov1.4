@@ -6,7 +6,7 @@ import movieSection from './assets/filmaria.png';
 import jordan from './assets/jordan.png';
 import nike from './assets/nike.png';
 import dualshock from './assets/dualshock.png';
-import dogs from './assets/dogs.png';
+import pizza from './assets/sujeitopizza.png';
 import react from './assets/react.png';
 import javascript from './assets/js.png';
 import devweb from './assets/devweb.png';
@@ -14,10 +14,31 @@ import gmail from './assets/gmail.png';
 import linkedin from './assets/in.png';
 import wpp from './assets/wpp.png';
 
+
+import menu from './assets/menu.png';
+
 import { Navegation, Introduction, AboutMe, Projects, Skills, Contact, Footer } from './styles.js';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+  // const [menu, setMenu] = useState(false)
+
+  // useEffect(() => {
+
+  //   setMenu(
+  //     <nav>
+  //       <ul>
+  //         <li><a href='/'>Início</a></li>
+  //         <li><a href='#sobremim'>Sobre mim</a></li>
+  //         <li><a href='#projetos'>Projetos</a></li>
+  //         <li><a href='#contatos'>Contato</a></li>
+  //       </ul>
+  //     </nav>
+  //   )
+
+  // }, [])
+
   return (
     <div className="container">
       <header>
@@ -29,6 +50,7 @@ function App() {
             <li><a href='#contatos'>Contato</a></li>
           </ul>
         </Navegation>
+        <img src={menu} onClick={console.log("testeeee")} />
       </header>
 
       <main>
@@ -36,9 +58,18 @@ function App() {
         <Introduction>
           <div className="apresentation">
             <h1>Olá, eu sou o <br /> Marcus!</h1>
-            <p>Desenvolvedor Front-end ▪ React.js </p>
-            <a href='https://github.com/marcusvinicius0' rel="noreferrer" target="_blank">Acesse meu Github</a>
-            <a href={resume} className="resume" download><p className="download-resume">Download Currículo</p></a>
+
+            <p>Desenvolvedor Front-end ▪ React.js</p>
+
+
+            <a className="github-link" href="https://github.com/marcusvinicius0" target="_blank" rel="noreferrer">
+              <p className="links">Acessar github</p>
+            </a>
+
+
+            <a href={resume} className="resume-link" download>
+              <p className="links">Download CV</p>
+            </a>
           </div>
 
           <div className="main-img">
@@ -47,10 +78,12 @@ function App() {
         </Introduction>
 
         <AboutMe>
-          <h2 id="sobremim">Um pouco sobre mim:</h2>
-          <p>Sou uma pessoa fascinada por esse universo da tecnologia. Busco sempre fazer projetos nos quais além de me fazer gostar do processo de desenvolvimento faz eu aprender tecnologias importantes que provaram seu valor. Atualmente faço parte de um bootcamp de programação chamado DevClub onde há módulos sobre o lado do cliente e do servidor. Tecnologias como: react.js, node.js, JavaScript, CSS, HTML são abordadas na teoria e prática com exercícios e desafios. Temos nossa comunidade onde trocamos experiência, além de ajudar e guiar membros que estão começando nessa carreira.</p>
-          <h3>04+</h3>
-          <p className="time-experience">meses de experiência em desenvolvimento de aplicações web. Projetos como landing pages, sistema de chamados, conversor de moedas, pedido de lanches, filmaria consumindo API.</p>
+          <div className="background">
+            <h2 id="sobremim">Um pouco sobre mim:</h2>
+            <p>Sou uma pessoa fascinada por esse universo da tecnologia. Busco sempre fazer projetos nos quais além de me fazer gostar do processo de desenvolvimento faz eu aprender tecnologias importantes que provaram seu valor. Atualmente faço parte de um bootcamp de programação chamado DevClub onde há módulos sobre o lado do cliente e do servidor. Tecnologias como: react.js, node.js, JavaScript, CSS, HTML são abordadas na teoria e prática com exercícios e desafios. Temos nossa comunidade onde trocamos experiência, além de ajudar e guiar membros que estão começando nessa carreira.</p>
+            <h3>05+</h3>
+            <p className="time-experience">meses de experiência em desenvolvimento de aplicações web. Projetos como landing pages, sistema de chamados, conversor de moedas, pedido de lanches, filmaria consumindo API.</p>
+          </div>
         </AboutMe>
 
         <Projects>
@@ -60,26 +93,26 @@ function App() {
             <div className="container-project">
 
               <img src={callSystem} alt="sistema-chamados" />
-                <p className='project-name'>SISTEMA DE CHAMADOS</p>
-                
-                <p className='about-it'>
-                  <i>Cadastre empresas, crie e edite chamados para reuniões e tarefas.</i>
-                </p>
-              
-                <a className="repository-link" href='https://github.com/marcusvinicius0/sistema-de-chamados' target="_blank">
-                  Ver repositório
-                </a>
+              <p className='project-name'>SISTEMA DE CHAMADOS</p>
 
-                <a className="application-link" href="https://github.com/marcusvinicius0/sistema-de-chamados" target="_blank" rel="noreferrer">
-                  Ver aplicação
-                </a>
+              <p className='about-it'>
+                <i>Cadastre empresas, crie e edite chamados para reuniões e tarefas.</i>
+              </p>
+
+              <a className="repository-link" href='https://github.com/marcusvinicius0/sistema-de-chamados' target="_blank">
+                Ver repositório
+              </a>
+
+              <a className="application-link" href="https://sistema-de-chamados1.netlify.app/" target="_blank" rel="noreferrer">
+                Ver aplicação
+              </a>
             </div>
 
             <div className="container-project">
 
-            <img src={burguerRequest} alt="pedido-lanches" />
+              <img src={burguerRequest} alt="pedido-lanches" />
               <p className='project-name'>PEDIDO DE LANCHES</p>
-              
+
               <p className='about-it'>
                 <i>Cadastre seu nome, faça pedido de lanches e salve eles em outra tela.</i>
               </p>
@@ -88,36 +121,36 @@ function App() {
                 Ver repositório
               </a>
 
-             <a className="application-link" href="https://github.com/marcusvinicius0/Pedido-de-lanches" target="_blank" rel="noreferrer">
-               Ver aplicação
-             </a>
+              <a className="application-link" href="https://github.com/marcusvinicius0/Pedido-de-lanches" target="_blank" rel="noreferrer">
+                Ver aplicação
+              </a>
             </div>
 
             <div className="container-project">
-              
-                <img src={movieSection} alt="filmaria" />
-        
+
+              <img src={movieSection} alt="filmaria" />
+
               <p className='project-name'>FILMARIA</p>
-              
+
               <p className='about-it'>
                 <i>Acesse uma lista de grandes lançamentos, leia a sinopse, salve e assista ao trailer.</i>
               </p>
-              
+
               <a className="repository-link" href="https://github.com/marcusvinicius0/projeto-filmaria" target="_blank" rel="noreferrer">
                 Ver repositório
               </a>
-              
+
               <a className="application-link" href="https://projeto-filmaria-react.netlify.app/" target="_blank" rel="noreferrer">
                 Ver aplicação
               </a>
             </div>
 
             <div className="container-project">
-              
-                <img src={codingImage} alt="meu-portfólio" />
+
+              <img src={codingImage} alt="meu-portfólio" />
 
               <p className='project-name'>MEU PORTFÓLIO</p>
-              
+
               <p className='about-it'>
                 <i>Desenvolvido a fins de mostrar meus principais projetos e habilidades.</i>
               </p>
@@ -132,15 +165,15 @@ function App() {
             </div>
 
             <div className="container-project">
-           
-                <img src={jordan} alt="jordan-landingPage" />
+
+              <img src={jordan} alt="jordan-landingPage" />
 
               <p className='project-name'>JORDAN LANDING PAGE</p>
-              
+
               <p className='about-it'>
                 <i>Veja os novos lançamentos da linha Jordan e escolha o que te agrada.</i>
               </p>
-              
+
               <a className="repository-link" href='https://github.com/marcusvinicius0/Landing-Page-Jordan' target="_blank">
                 Ver repositório
               </a>
@@ -152,14 +185,14 @@ function App() {
 
             <div className="container-project">
 
-                <img src={nike} alt="nike-landingPage" />
+              <img src={nike} alt="nike-landingPage" />
 
               <p className='project-name'>NIKE LANDING PAGE</p>
-              
+
               <p className='about-it'>
                 <i>Veja o modelo e as informações do Comfy Maxer, assista à introdução.</i>
               </p>
-              
+
               <a className="repository-link" href='https://github.com/marcusvinicius0/Landing-Page-Nike' target="_blank">
                 Ver repositório
               </a>
@@ -171,31 +204,31 @@ function App() {
 
             <div className="container-project">
 
-                <img src={dualshock} alt="dualshock-landingPage" />
-      
+              <img src={dualshock} alt="dualshock-landingPage" />
+
               <p className='project-name'>DUALSHOCK LANDING PAGE</p>
 
               <p className='about-it'>
                 <i>Veja o mais novo modelo do dualshock que veio com o playstation5.</i>
               </p>
-              
+
               <a className="repository-link" href='https://github.com/marcusvinicius0/playstation-project'
                 target="_blank">
                 Ver repositório
               </a>
-              
+
               <a className="application-link" href="https://marcusvinicius0.github.io/playstation-project/" target="_blank" rel="noreferrer">
                 Ver aplicação
               </a>
             </div>
 
             <div className="container-project">
-              <a href='' target="_blank" rel="noreferrer">
-                <img className="doguinho" src={dogs} alt="rede-social" />
-              </a>
-              <p className='project-name-soon'> SOCIAL DOGS (EM BREVE)</p>
+
+              <img className="doguinho" src={pizza} alt="rede-social" />
+
+              <p className='project-name-soon'> SUJEITO PIZZA (EM BREVE)</p>
               <p className='about-it'>
-                <i>Navegue em uma rede social dos pets. Adicione fotos de seu cachorro, comente, curta.</i>
+                <i>Cadastro de pedidos, onde o garçom anota o pedido do cliente e passa para a cozinha.  </i>
               </p>
               <a className="repository-link" href=''
                 target="_blank">
@@ -275,8 +308,8 @@ function App() {
 
       <footer>
         <Footer>
-            <p>@2022 Marcus Vinícius - Desenvolvedor Front-end</p>
-            <p>(Quase) todos os direitos reservados. ®</p>
+          <p>@2022 Marcus Vinícius - Desenvolvedor Front-end</p>
+          <p>(Quase) todos os direitos reservados. ®</p>
         </Footer>
       </footer>
 

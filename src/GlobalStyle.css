@@ -38,3 +38,21 @@ header{
     padding: .9em;
     border-radius: 15vw;
 }
+
+.menu-hamb{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+@media (max-width: 889px){
+    .menu-hamb{
+        margin-right: 9px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        visibility: visible;
+    }
+}

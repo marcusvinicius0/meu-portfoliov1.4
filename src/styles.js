@@ -27,7 +27,22 @@ export const Navegation = styled.nav`
     @media (min-width: 1040px) and (max-width: 1115px){margin-left: 55vw}
     @media (min-width: 965px) and (max-width: 1039px){margin-left: 53vw}
     @media (min-width: 890px) and (max-width: 964px){margin-left: 51vw}
-    @media (max-width: 889px) {display: none}
+    .showMenu{
+        @media (max-width: 889px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        position: absolute;
+        right: 8px;
+        top: 40px;
+    }
+}
+    .notShowMenu{
+        @media (max-width: 889px){
+            display: none;
+        }
+    
+    }
 `
 
 
@@ -210,7 +225,7 @@ export const AboutMe = styled.div`
         @media (min-width: 515px) and (max-width: 589px){margin-left: 3rem}
         @media (min-width: 440px) and (max-width: 514px){margin-left: 3rem}
         @media (min-width: 365px) and (max-width: 439px){margin-left: 2.5rem}
-        @media (max-width: 364px){margin-left: 2.5rem}
+        @media (max-width: 364px){margin-left: 1.2rem}
     } 
 
     p{
@@ -270,8 +285,15 @@ export const AboutMe = styled.div`
 `
 
 export const Projects = styled.div`
-    background-color: #1A1A29;
-    height: 125vh;
+    .project-background{
+        background-color: #1A1A29;
+        height: 125vh;
+        @media (min-width: 823px) and (max-width: 1115px){height: 178vh}
+        @media (min-width: 723px) and (max-width: 822px){height: 225vh}
+        @media (min-width: 550px) and (max-width: 722px){height: 235vh}
+        @media (min-width: 365px) and (max-width: 549px){height: 240vh}
+        @media (max-width: 544px){height: 435vh}
+    }
 
     h4{
         margin-top: 84px;
@@ -279,6 +301,13 @@ export const Projects = styled.div`
         color: #7562E0;
         font-size: 40px;
         padding-top: 55px;
+        @media (min-width: 740px) and (max-width: 1115px){margin-left: 13vw}
+        @media (min-width: 665px) and (max-width: 739px){margin-left: 10vw; font-size: 35px}
+        @media (min-width: 590px) and (max-width: 664px){margin-left: 5vw; font-size: 35px}
+        @media (min-width: 515px) and (max-width: 589px){margin-left: 10vw; font-size: 35px}
+        @media (min-width: 440px) and (max-width: 514px){margin-left: 10vw; font-size: 35px}
+        @media (min-width: 365px) and (max-width: 439px){margin-left: 10vw; font-size: 35px}
+        @media (max-width: 364px){margin-left: 10vw; font-size: 35px}
     }
 
     .container2{
@@ -289,6 +318,7 @@ export const Projects = styled.div`
         align-items: center;
         gap: 2em;
         margin-top: 60px;
+        @media (min-width: 890px) and (max-width: 1115px){padding: 0.5rem}
     }
 
     .container-project{
@@ -364,8 +394,19 @@ export const Projects = styled.div`
 `
 
 export const Skills = styled.div`
-    background-color: #1A1A29;
-    height: 75vh;
+    .skills-container{
+        background-color: #1A1A29;
+        height: 75vh;
+        @media (min-width: 883px) and (max-width: 1115px){height: 80vh}
+        @media (min-width: 740px) and (max-width: 882px){height: 130vh}
+        @media (min-width: 665px) and (max-width: 739px){height: 130vh}
+        @media (min-width: 590px) and (max-width: 664px){height: 130vh}
+        @media (min-width: 515px) and (max-width: 589px){height: 175vh}
+        @media (min-width: 440px) and (max-width: 514px){height: 180vh}
+        @media (min-width: 365px) and (max-width: 439px){height: 185vh}
+        @media (max-width: 364px){height: 185vh}
+    }
+
 
     h5{
     margin-top: 84px;
@@ -373,6 +414,9 @@ export const Skills = styled.div`
     color: #7562E0;
     font-size: 40px;
     padding-top: 55px;
+    @media (min-width: 440px) and (max-width: 514px){margin-left: 90px}
+    @media (min-width: 365px) and (max-width: 439px){margin-left: 60px}
+    @media (max-width: 364px){margin-left: 35px}
     }
 
     .container3{
@@ -422,19 +466,26 @@ export const Contact = styled.div`
     color: #7562E0;
     font-size: 32px;
     padding-top: 55px;
+    @media (min-width: 515px) and (max-width: 590px){margin-left: 30px}
+    @media (min-width: 440px) and (max-width: 514px){margin-left: 30px}
+    @media (min-width: 365px) and (max-width: 439px){margin-left: 30px}
+    @media (max-width: 364px){margin-left: 30px}
     }
 
     .contacts{
         display: flex;
         justify-content: flex-start;
         flex-direction: row;
-        gap: 5vw;
-        margin-top: 2vw;
+        gap: 60px;
+        margin-top: 60px;
         margin-left: 140px;
+        @media (min-width: 440px) and (max-width: 514px){margin-left: 100px}
+        @media (min-width: 365px) and (max-width: 439px){margin-left: 50px}
+        @media (max-width: 364px){margin-left: 50px}
     }
 
     img{
-        height: 35px;
+        height: 30px;
     }
 
     .formulario label{

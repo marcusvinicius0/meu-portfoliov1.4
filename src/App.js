@@ -28,10 +28,10 @@ function App() {
       <header>
         <Navegation>
           <ul className={showMenu ? 'showMenu' : 'notShowMenu'}>
-            <li><a href='/'>Início</a></li>
-            <li><a href='#sobremim'>Sobre mim</a></li>
-            <li><a href='#projetos'>Projetos</a></li>
-            <li><a href='#contatos'>Contato</a></li>
+            <li><a href='/'>Home</a></li>
+            <li><a href='#sobremim'>About me</a></li>
+            <li><a href='#projetos'>Projects</a></li>
+            <li><a href='#contatos'>Contact</a></li>
           </ul>
         </Navegation>
         <div className="menu-hamb" onClick={()=> setShowMenu(!showMenu)} >
@@ -43,13 +43,13 @@ function App() {
 
         <Introduction>
           <div className="apresentation">
-            <h1>Olá, eu sou o <br /> Marcus!</h1>
+            <h1>Hey there, I am <br /> Marcus!</h1>
 
-            <p>Desenvolvedor Front-end ▪ React.js</p>
+            <p>Front-end developer ▪ React.js</p>
 
 
             <a className="github-link" href="https://github.com/marcusvinicius0" target="_blank" rel="noreferrer">
-              <p className="links">Acessar github</p>
+              <p className="links">Access github</p>
             </a>
 
 
@@ -65,51 +65,51 @@ function App() {
 
         <AboutMe>
           <div className="background">
-            <h2 id="sobremim">Um pouco sobre mim:</h2>
-            <p>Sou uma pessoa fascinada por esse universo da tecnologia. Busco sempre fazer projetos nos quais além de me fazer gostar do processo de desenvolvimento faz eu aprender tecnologias importantes que provaram seu valor. Atualmente faço parte de um bootcamp de programação chamado DevClub onde há módulos sobre o lado do cliente e do servidor. Tecnologias como: react.js, node.js, JavaScript, CSS, HTML são abordadas na teoria e prática com exercícios e desafios. Temos nossa comunidade onde trocamos experiência, além de ajudar e guiar membros que estão começando nessa carreira.</p>
+            <h2 id="sobremim">A bit about me:</h2>
+            <p>I am a person fascinated by this world of technology. I always seek to make projects in which besides making me enjoy the process of development makes me learn important technologies that proved their worth. Currently I make part of a programming bootcamp called DevClub where there are modules about the client side and server side. Technologies like: react.js, node.js, javascript, CSS, HTML are addressed in theory and practice by exercises and challenges. We have our community which we exchange experience plus help and guide members that are starting in this carrer.  </p>
             <h3>05+</h3>
-            <p className="time-experience">meses de experiência em desenvolvimento de aplicações web. Projetos como landing pages, sistema de chamados, conversor de moedas, pedido de lanches, filmaria consumindo API.</p>
+            <p className="time-experience"> months of experience in web application development. Projects like call system, landing pages, currency converter, snacks order, moviesection consuming API.</p>
           </div>
         </AboutMe>
 
         <Projects>
           <div className="project-background">
-            <h4 id="projetos">Alguns projetos que desenvolvi:</h4>
+            <h4 id="projetos">Some projects I have developed:</h4>
 
             <div className="container2">
               <div className="container-project">
 
                 <img src={callSystem} alt="sistema-chamados" />
-                <p className='project-name'>SISTEMA DE CHAMADOS</p>
+                <p className='project-name'>CALL SYSTEM</p>
 
                 <p className='about-it'>
-                  <i>Cadastre empresas, crie e edite chamados para reuniões e tarefas.</i>
+                  <i>Register companies, create and edit call for meetings and tasks.</i>
                 </p>
 
                 <a className="repository-link" href='https://github.com/marcusvinicius0/sistema-de-chamados' target="_blank">
-                  Ver repositório
+                  See repository
                 </a>
 
                 <a className="application-link" href="https://sistema-de-chamados1.netlify.app/" target="_blank" rel="noreferrer">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
 
               <div className="container-project">
 
                 <img src={burguerRequest} alt="pedido-lanches" />
-                <p className='project-name'>PEDIDO DE LANCHES</p>
+                <p className='project-name'>SNACK'S ORDER</p>
 
                 <p className='about-it'>
-                  <i>Cadastre seu nome, faça pedido de lanches e salve eles em outra tela.</i>
+                  <i>Register your name, order a snack and save it in another screen.</i>
                 </p>
 
                 <a className="repository-link" href='https://github.com/marcusvinicius0/Pedido-de-lanches' target="_blank">
-                  Ver repositório
+                 See repository
                 </a>
 
                 <a className="application-link" href="https://github.com/marcusvinicius0/Pedido-de-lanches" target="_blank" rel="noreferrer">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
 
@@ -117,18 +117,18 @@ function App() {
 
                 <img src={movieSection} alt="filmaria" />
 
-                <p className='project-name'>FILMARIA</p>
+                <p className='project-name'>MOVIESECTION</p>
 
                 <p className='about-it'>
-                  <i>Acesse uma lista de grandes lançamentos, leia a sinopse, salve e assista ao trailer.</i>
+                  <i>Access a list of main releases, read synopsis, save and watch the trailer.</i>
                 </p>
 
                 <a className="repository-link" href="https://github.com/marcusvinicius0/projeto-filmaria" target="_blank" rel="noreferrer">
-                  Ver repositório
+                  See repository
                 </a>
 
                 <a className="application-link" href="https://projeto-filmaria-react.netlify.app/" target="_blank" rel="noreferrer">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
 
@@ -136,18 +136,18 @@ function App() {
 
                 <img src={codingImage} alt="meu-portfólio" />
 
-                <p className='project-name'>MEU PORTFÓLIO</p>
+                <p className='project-name'>MY PORTFOLIO</p>
 
                 <p className='about-it'>
-                  <i>Desenvolvido a fins de mostrar meus principais projetos e habilidades.</i>
+                  <i>Developed for the purpose to show my main projects and skills.</i>
                 </p>
 
                 <a className="repository-link" href="" target="_blank">
-                  Ver repositório
+                  See repository
                 </a>
 
                 <a className="application-link" href="">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
 
@@ -158,15 +158,15 @@ function App() {
                 <p className='project-name'>JORDAN LANDING PAGE</p>
 
                 <p className='about-it'>
-                  <i>Veja os novos lançamentos da linha Jordan e escolha o que te agrada.</i>
+                  <i>See the new features of Jordan's line and pick the one you enjoy.</i>
                 </p>
 
                 <a className="repository-link" href='https://github.com/marcusvinicius0/Landing-Page-Jordan' target="_blank">
-                  Ver repositório
+                  See repository
                 </a>
 
                 <a className="application-link" href="https://marcusvinicius0.github.io/Landing-Page-Jordan/" target="_blank" rel="noreferrer">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
 
@@ -177,15 +177,15 @@ function App() {
                 <p className='project-name'>NIKE LANDING PAGE</p>
 
                 <p className='about-it'>
-                  <i>Veja o modelo e as informações do Comfy Maxer, assista à introdução.</i>
+                  <i>See the template and infos about Comfy Maxes, watch the introdution.</i>
                 </p>
 
                 <a className="repository-link" href='https://github.com/marcusvinicius0/Landing-Page-Nike' target="_blank">
-                  Ver repositório
+                  See repository
                 </a>
 
                 <a className="application-link" href="https://marcusvinicius0.github.io/Landing-Page-Nike/" target="_blank" rel="noreferrer">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
 
@@ -196,33 +196,33 @@ function App() {
                 <p className='project-name'>DUALSHOCK LANDING PAGE</p>
 
                 <p className='about-it'>
-                  <i>Veja o mais novo modelo do dualshock que veio com o playstation5.</i>
+                  <i>See the newest template of playstation's 5 dualshock.</i>
                 </p>
 
                 <a className="repository-link" href='https://github.com/marcusvinicius0/playstation-project'
                   target="_blank">
-                  Ver repositório
+                  See repository
                 </a>
 
                 <a className="application-link" href="https://marcusvinicius0.github.io/playstation-project/" target="_blank" rel="noreferrer">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
 
               <div className="container-project">
 
-                <img className="doguinho" src={pizza} alt="rede-social" />
+                <img className="doguinho" src={()=>{}} alt="social-network" />
 
-                <p className='project-name-soon'> SUJEITO PIZZA (EM BREVE)</p>
+                <p className='project-name-soon'> DEV SOCIAL NETWORK (SOON)</p>
                 <p className='about-it'>
-                  <i>Sistema restaurante: cadastre, edite e exclua pedidos e mande para a cozinha.  </i>
+                  <i>A social network where you can meet your friends, add them and share experience.  </i>
                 </p>
                 <a className="repository-link" href=''
                   target="_blank">
-                  Ver repositório
+                  See repository
                 </a>
                 <a className="application-link" href="">
-                  Ver aplicação
+                  See application
                 </a>
               </div>
             </div>
@@ -231,32 +231,32 @@ function App() {
 
         <Skills>
           <div className="skills-container">
-            <h5>Minha stack:</h5>
+            <h5>My stack:</h5>
 
             <div className="container3">
               <div className="container-skills">
                 <img src={react} alt="react.js" />
                 <p className="stack">REACT.JS</p>
-                <p>Biblioteca javascript com foco em criação de interfaces de usuário. Criamos, atualizamos e renderizamos de forma eficiente e escalável as aplicações. </p>
+                <p>Javascript library focused on creating user interfaces. We create, update and render applications efficiently and scalably. </p>
               </div>
 
               <div className="container-skills">
                 <img src={javascript} alt="javascript" />
                 <p className="stack">JAVASCRIPT</p>
-                <p>Linguagem de programação de tipagem leve, tendo seu diferencial globalmente por poder ser usada para desenvolvimento web, back-end, aplicativos. </p>
+                <p>Lightly typed programming language, having its differential globally for being able to be used for web development, back-end, applications. </p>
               </div>
 
               <div className="container-skills">
                 <img src={devweb} alt="desenvolvimento-web" />
-                <p className="stack">DESENVOLVIMENTO WEB</p>
-                <p>Criação de aplicações web utilizando HTML5, CSS3, bibliotecas e mediaqueries para aplicações responsivas a qualquer dispositivo.</p>
+                <p className="stack">WEB DEVELOPMENT</p>
+                <p>Creation of web applications using HTML5, CSS3, libraries and mediaqueries for responsive applications to any device.</p>
               </div>
             </div>
           </div>
         </Skills>
 
         <Contact>
-          <h6 id="contatos">Entre em contato comigo:</h6>
+          <h6 id="contatos">Contact me:</h6>
 
           <div className="contacts">
 
@@ -277,8 +277,8 @@ function App() {
 
       <footer>
         <Footer>
-          <p>@2022 Marcus Vinícius - Desenvolvedor Front-end</p>
-          <p>(Quase) todos os direitos reservados. ®</p>
+          <p>@2022 Marcus Vinícius - Front-end developer</p>
+          <p>(Almost) all rights reserved. ®</p>
         </Footer>
       </footer>
 
